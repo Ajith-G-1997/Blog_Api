@@ -2,6 +2,7 @@ from rest_framework import serializers
 from .models import Blog
 from django.contrib.auth.models import User
 from rest_framework import serializers
+from rest_framework import serializers
 
 class BlogSerializer(serializers.ModelSerializer):
     class Meta:
@@ -31,7 +32,7 @@ class UserSerializer(serializers.ModelSerializer):
         user = User.objects.create_user(**validated_data)
         return user
 
-from rest_framework import serializers
+
 
 class UserBlogCountSerializer(serializers.Serializer):
     user_id = serializers.IntegerField()
